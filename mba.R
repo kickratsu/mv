@@ -60,7 +60,7 @@ itemFrequencyPlot(data,support=0.10)
 itemFrequencyPlot(data,topN=5)
 
 apr<-apriori(data = data,parameter =list(support=0.01,confidence=0.50))
-inspect(apr)
+inspect(sort(apr, by = "confidence"))
 
 #library("arulesViz")
 #plot(apr,method="graph")
